@@ -90,6 +90,7 @@ module Dox
         when /xml/
           pretty_xml(body_str)
         else
+          puts "\033[43;30mliangliang: #{body_str}\033[0m"
           body_str
         end
       end
