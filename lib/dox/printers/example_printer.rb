@@ -91,7 +91,8 @@ module Dox
           pretty_xml(body_str)
         else
           # puts "\033[43;30mliangliang: #{body_str}\033[0m"
-          Rack::Utils.parse_query(body_str).to_json
+          # Rack::Utils.parse_query(body_str).to_json
+          CGI.unescape(body_str)
         end
       end
 
